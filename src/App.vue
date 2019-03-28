@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Nav class="nav" />
+    <Nav class="nav" :style="{background:navColor}" />
     <router-view></router-view>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -12,8 +12,25 @@
 <script>
 import Nav from '@/components/Nav.vue'
 export default {
+  data() {
+    return {
+      navColor:' '
+    }
+  },
   components:{
     Nav
+  },
+  mounted() {
+    // window.addEventListener("scroll",this.homeScroll)
+  },
+  methods: {
+    // homeScroll:function(){
+    //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+    //   if(scrollTop > 300){
+    //     this.navColor = '#fff'
+    //   }
+    //   console.log(scrollTop) 
+    // }
   }
 }
 </script>
@@ -23,12 +40,13 @@ export default {
   margin:0;
   padding: 0;
   text-decoration: none;
+  list-style:none;
 }
 #app {
   font-family: "helvetica neue",arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   font-size: 14px;
   color: #444;
 }

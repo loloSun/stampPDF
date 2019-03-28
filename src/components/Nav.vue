@@ -37,6 +37,12 @@ export default {
     width: 100%;
     height: 48px;
     background: 0;
+    @media screen and (min-width: 1529px){
+        .navbox {
+            width: 1500px;
+        }
+    }
+
     @media screen and (max-width: 1528px) and (min-width: 1276px){
         .navbox{
             width: 1248px;
@@ -48,7 +54,7 @@ export default {
         }
     }
     .navbox{
-        margin:0 auto;
+        margin:auto;
         height: 100%;
         // background: yellow;
         text-align: center;
@@ -100,7 +106,7 @@ export default {
             a{
                 float: left;
                 color:#fff;
-                margin-top: 6px;
+                margin-top: 7px;
             }
             .btn{
                 border-radius: 2px;
