@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Nav class="nav" :style="{background:navColor}" />
     <router-view></router-view>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -10,16 +9,7 @@
   </div>
 </template>
 <script>
-import Nav from '@/components/Nav.vue'
 export default {
-  data() {
-    return {
-      navColor:' '
-    }
-  },
-  components:{
-    Nav
-  },
   mounted() {
     // window.addEventListener("scroll",this.homeScroll)
   },
@@ -29,7 +19,7 @@ export default {
     //   if(scrollTop > 300){
     //     this.navColor = '#fff'
     //   }
-    //   console.log(scrollTop) 
+    //   console.log(scrollTop)
     // }
   }
 }
